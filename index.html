@@ -80,6 +80,82 @@
         </div>
     </div>
 
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve your baskets </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form">
+                        <div class="form-group row">
+                            <label for="baskets" class="col-12 col-sm-3 col-form-label">Number of baskets</label>
+                            <div class="col-12 col-sm-9">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="1" name="baskets" value="">
+                                    <label class="form-check-label" for="1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="2" name="baskets" value="">
+                                    <label class="form-check-label" for="2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="3" name="baskets" value="">
+                                    <label class="form-check-label" for="3">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="4" name="baskets" value="">
+                                    <label class="form-check-label" for="4">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="5" name="baskets" value="">
+                                    <label class="form-check-label" for="5">5</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="6" name="baskets" value="">
+                                    <label class="form-check-label" for="6">6</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="Date&Time" class="col-12 col-sm-3 col-form-label">Date and Time</label>
+                            <div class="input-group col-12 col-sm-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-calendar fa-lg"></i></span>
+
+                                    <input class="form-control" type="date" id="date" name="date">
+                                </div>
+                            </div>   
+                            <div class="input-group col-12 col-sm-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-clock-o fa-lg"></i></span>
+                                    <input class="form-control" type="time" id="time" name="time">
+                                </div>
+                            </div>     
+                        </div>
+                        <div class="form-group row">
+                            <label for="section" class="col-12 col-sm-3 col-form-label">Home Delivery</label>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label for="non-home-Delivery" class="btn btn-success active">
+                                    <input type="radio" name="section" id="non-home-Delivery" autocomplete="off" checked> Yes
+                                </label>
+                                <label for="home-Delivery" class="btn btn-danger">
+                                    <input type="radio" name="section" id="home-Delivery" autocomplete="off"> No
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header align-items-center">
@@ -93,14 +169,14 @@
                     <img src="images/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3">
-                    <p style="padding-left:5px;"></p>
-                    <!-- <a class="btn btn-warning btn-sm" href="#reserve-form" role="button">Reserve your baskets</a> -->
-                    <a type="button" class="btn btn-warning btn-sm btn-block"
+                    <p style="padding-left:5px;"></p>        
+                    <!-- <a type="button" class="btn btn-warning btn-sm btn-block"
                         data-toggle="tooltip" data-html="true" 
                         title="Or Call us at <br><strong>+ 987 6543 2100</strong>"
                         data-placement="bottom" href="#reserve-form">
                         Reserve your baskets
-                    </a>
+                    </a> -->
+                    <a type="button" class="btn btn-warning btn-sm btn-block" data-toggle="modal" data-target="#reserveModal">Reserve your baskets</a>
                 </div>
             </div>
         </div>
@@ -221,7 +297,7 @@
             </div>
         </div>
 
-        <div class="row row-content justify-content-center">
+        <!-- <div class="row row-content justify-content-center">
             <div class="col-12 col-sm-8">
                 <div class="card border-default">
                     <h3 class="card-header bg-warning text-white" id="reserve-form">Reserve your baskets</h3>
@@ -281,7 +357,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <footer class="footer">
@@ -341,7 +417,7 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- The tooltip needs to be activated by adding a small Javascript code -->
-    <script>$(function () {$('[data-toggle="tooltip"]').tooltip()})</script>
+    <!-- <script>$(function () {$('[data-toggle="tooltip"]').tooltip()})</script> -->
 </body>
 
 </html>
